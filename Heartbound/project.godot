@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="Heartbound"
-run/main_scene="res://Scenes/level1.tscn"
+run/main_scene="res://Scenes/level2.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
 [autoload]
 
 GameManager="*res://Scripts/GameManager.gd"
+Level2="*res://level2.gd"
 
 [display]
 

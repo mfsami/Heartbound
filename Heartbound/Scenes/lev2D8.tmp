@@ -1,21 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://c544bmsqtd2eu"]
+[gd_scene load_steps=15 format=3 uid="uid://dx3pg2fqsfnrr"]
 
-[ext_resource type="Script" path="res://Scripts/level1.gd" id="1_b28am"]
-[ext_resource type="PackedScene" uid="uid://cwea13xd1i2q5" path="res://Scenes/guy.tscn" id="1_sxuir"]
-[ext_resource type="Texture2D" uid="uid://cqpdsmc17lnis" path="res://Sprites/TILES.png" id="1_y81vf"]
-[ext_resource type="Script" path="res://Scripts/guy.gd" id="2_08j1m"]
-[ext_resource type="PackedScene" uid="uid://dx3pg2fqsfnrr" path="res://Scenes/level2.tscn" id="4_dc1hw"]
-[ext_resource type="Texture2D" uid="uid://bcfelaside18e" path="res://Sprites/Tilemap1.png" id="4_lum2i"]
-[ext_resource type="PackedScene" uid="uid://bhhfsgpl23k1u" path="res://Scenes/heart.tscn" id="5_r2637"]
-[ext_resource type="Script" path="res://Scripts/Exit1.gd" id="6_ceieg"]
-[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="9_k61r2"]
-[ext_resource type="PackedScene" uid="uid://bu4kir7dy3plv" path="res://Scenes/door.tscn" id="10_li0s7"]
+[ext_resource type="Script" path="res://Scripts/level1.gd" id="1_11gtv"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_hfx6h"]
+[ext_resource type="PackedScene" uid="uid://bu4kir7dy3plv" path="res://Scenes/door.tscn" id="3_sgftt"]
+[ext_resource type="PackedScene" uid="uid://cwea13xd1i2q5" path="res://Scenes/guy.tscn" id="4_7akis"]
+[ext_resource type="Script" path="res://Scripts/guy.gd" id="5_3pji3"]
+[ext_resource type="Texture2D" uid="uid://cqpdsmc17lnis" path="res://Sprites/TILES.png" id="6_x7t3m"]
+[ext_resource type="Texture2D" uid="uid://bcfelaside18e" path="res://Sprites/Tilemap1.png" id="7_c1kgg"]
+[ext_resource type="Script" path="res://Spikes.gd" id="9_mkrub"]
+[ext_resource type="PackedScene" uid="uid://bhhfsgpl23k1u" path="res://Scenes/heart.tscn" id="9_mml5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xooos"]
 size = Vector2(17, 38.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cyk1f"]
-texture = ExtResource("1_y81vf")
+texture = ExtResource("6_x7t3m")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -658,7 +657,7 @@ texture = ExtResource("1_y81vf")
 15:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5rgv"]
-texture = ExtResource("4_lum2i")
+texture = ExtResource("7_c1kgg")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -936,12 +935,15 @@ separation = Vector2i(1, 1)
 7:4/0 = 0
 7:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:4/0/physics_layer_0/angular_velocity = 0.0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:4/0 = 0
 8:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:4/0/physics_layer_0/angular_velocity = 0.0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:4/0 = 0
 9:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:4/0/physics_layer_0/angular_velocity = 0.0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:4/0 = 0
 10:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:4/0/physics_layer_0/angular_velocity = 0.0
@@ -999,12 +1001,15 @@ separation = Vector2i(1, 1)
 7:5/0 = 0
 7:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:5/0/physics_layer_0/angular_velocity = 0.0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:5/0 = 0
 8:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:5/0/physics_layer_0/angular_velocity = 0.0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:5/0 = 0
 9:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:5/0/physics_layer_0/angular_velocity = 0.0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:5/0 = 0
 10:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:5/0/physics_layer_0/angular_velocity = 0.0
@@ -1023,15 +1028,19 @@ separation = Vector2i(1, 1)
 15:5/0 = 0
 15:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:5/0/physics_layer_0/angular_velocity = 0.0
+15:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:5/0 = 0
 16:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:5/0/physics_layer_0/angular_velocity = 0.0
+16:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:5/0 = 0
 17:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:5/0/physics_layer_0/angular_velocity = 0.0
+17:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:5/0 = 0
 18:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:5/0/physics_layer_0/angular_velocity = 0.0
+18:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:5/0 = 0
 19:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:5/0/physics_layer_0/angular_velocity = 0.0
@@ -1062,12 +1071,15 @@ separation = Vector2i(1, 1)
 7:6/0 = 0
 7:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:6/0/physics_layer_0/angular_velocity = 0.0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:6/0 = 0
 8:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:6/0/physics_layer_0/angular_velocity = 0.0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:6/0 = 0
 9:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:6/0/physics_layer_0/angular_velocity = 0.0
+9:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:6/0 = 0
 10:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:6/0/physics_layer_0/angular_velocity = 0.0
@@ -1086,15 +1098,19 @@ separation = Vector2i(1, 1)
 15:6/0 = 0
 15:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:6/0/physics_layer_0/angular_velocity = 0.0
+15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:6/0 = 0
 16:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:6/0/physics_layer_0/angular_velocity = 0.0
+16:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:6/0 = 0
 17:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:6/0/physics_layer_0/angular_velocity = 0.0
+17:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:6/0 = 0
 18:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:6/0/physics_layer_0/angular_velocity = 0.0
+18:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:6/0 = 0
 19:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:6/0/physics_layer_0/angular_velocity = 0.0
@@ -1149,15 +1165,19 @@ separation = Vector2i(1, 1)
 15:7/0 = 0
 15:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:7/0/physics_layer_0/angular_velocity = 0.0
+15:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:7/0 = 0
 16:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:7/0/physics_layer_0/angular_velocity = 0.0
+16:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:7/0 = 0
 17:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:7/0/physics_layer_0/angular_velocity = 0.0
+17:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:7/0 = 0
 18:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:7/0/physics_layer_0/angular_velocity = 0.0
+18:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:7/0 = 0
 19:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:7/0/physics_layer_0/angular_velocity = 0.0
@@ -2034,27 +2054,26 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cyk1f")
 sources/1 = SubResource("TileSetAtlasSource_y5rgv")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ijim"]
-size = Vector2(40.125, 72)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ec6qd"]
+size = Vector2(319, 15)
 
 [node name="Node" type="Node"]
-script = ExtResource("1_b28am")
+script = ExtResource("1_11gtv")
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("9_k61r2")
+script = ExtResource("2_hfx6h")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Door" parent="." instance=ExtResource("10_li0s7")]
-position = Vector2(498, 445)
-target_level = ExtResource("4_dc1hw")
+[node name="Door" parent="." instance=ExtResource("3_sgftt")]
+position = Vector2(477, 193)
 
 [node name="SceneObjects" type="Node" parent="."]
 
-[node name="Guy" parent="SceneObjects" instance=ExtResource("1_sxuir")]
-position = Vector2(567, 460)
-script = ExtResource("2_08j1m")
+[node name="Guy" parent="SceneObjects" instance=ExtResource("4_7akis")]
+position = Vector2(521, 206)
+script = ExtResource("5_3pji3")
 
 [node name="Area2D" type="Area2D" parent="SceneObjects/Guy"]
 
@@ -2068,22 +2087,7 @@ position = Vector2(-547, -285)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_wo7ii")
 format = 2
-layer_0/tile_data = PackedInt32Array(851998, 983041, 9, 1572894, 983041, 11, 851999, 1048577, 536870924, 1572895, 1048577, 12, 852000, 1048577, 536870924, 1572896, 1048577, 12, 852001, 1048577, 536870924, 1572897, 1048577, 12, 852002, 1048577, 536870924, 1572898, 1048577, 12, 852003, 1048577, 536870924, 1572899, 1048577, 12, 852004, 1048577, 536870924, 1572900, 1048577, 12, 852005, 1048577, 536870924, 1572901, 1048577, 12, 852006, 1048577, 536870924, 1572902, 1048577, 12, 852007, 1048577, 536870924, 1572903, 1048577, 12, 852008, 1048577, 536870924, 1572904, 1048577, 12, 917534, 1048577, 1879048204, 983070, 1048577, 1879048204, 1048606, 1114113, 11, 1245214, 1114113, 9, 1310750, 1048577, 1879048204, 1376286, 1048577, 1879048204, 1441822, 1048577, 1879048204, 1507358, 1048577, 1879048204, 852009, 1114113, 9, 917545, 1048577, 1610612748, 983081, 1048577, 1610612748, 1048617, 1048577, 1610612748, 1114153, 983041, 11, 1310761, 983041, 9, 1376297, 1048577, 1610612748, 1441833, 1048577, 1610612748, 1507369, 1048577, 1610612748, 1572905, 1114113, 11, 1114152, 1048577, 9, 1114151, 1048577, 9, 1114150, 1048577, 9, 1114149, 1048577, 9, 1114148, 1048577, 9, 1179683, 983041, 10, 1245218, 1048577, 9, 1245217, 1048577, 9, 1245216, 1048577, 9, 1245215, 1048577, 9, 1245219, 1245185, 12, 1048607, 1114113, 11, 917536, 1048577, 11, 917537, 1048577, 11, 917538, 1048577, 11, 917539, 1048577, 11, 917540, 1048577, 11, 917541, 1048577, 11, 917542, 1048577, 11, 917543, 1048577, 11, 917544, 1048577, 11, 983071, 1114113, 10, 917535, 1245185, 10, 1114147, 983041, 9, 1310760, 1048577, 9, 1310759, 983041, 9, 1376295, 983041, 10, 1441831, 983041, 10, 1507367, 983041, 10, 1245213, 1048577, 10, 1245212, 1048577, 10, 1310762, 1048577, 10, 1310763, 1048577, 10)
-
-[node name="Exit2" type="Area2D" parent="SceneObjects" groups=["Door2"]]
-position = Vector2(392, 287)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Exit2"]
-position = Vector2(-28, 1)
-shape = SubResource("RectangleShape2D_6ijim")
-
-[node name="Exit1" type="Area2D" parent="SceneObjects" groups=["Door1"]]
-position = Vector2(809, 324)
-script = ExtResource("6_ceieg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Exit1"]
-position = Vector2(41, -5)
-shape = SubResource("RectangleShape2D_6ijim")
+layer_0/tile_data = PackedInt32Array(851999, 1048577, 536870917, 1572895, 1048577, 5, 852000, 1048577, 536870917, 1572896, 1048577, 5, 852001, 1048577, 536870917, 1572897, 1048577, 5, 852002, 1048577, 536870917, 1572898, 1048577, 5, 852003, 1048577, 536870917, 1572899, 1048577, 5, 852004, 1048577, 536870917, 1572900, 1048577, 5, 852005, 1048577, 536870917, 1572901, 1048577, 5, 852006, 1048577, 536870917, 1572902, 1048577, 5, 852007, 1048577, 536870917, 1572903, 1048577, 5, 852008, 1048577, 536870917, 917534, 1048577, 1342177285, 983070, 1048577, 1342177285, 1048606, 1048577, 1342177285, 1245214, 1048577, 1342177285, 1310750, 1048577, 1342177285, 1376286, 1048577, 1342177285, 1441822, 1048577, 1342177285, 1507358, 1048577, 1342177285, 917545, 1048577, 1610612741, 983081, 1048577, 1610612741, 1048617, 1048577, 1610612741, 1114153, 1048577, 1610612741, 1310761, 1048577, 1610612741, 1376297, 1048577, 1610612741, 1441833, 1048577, 1610612741, 1507369, 1048577, 1610612741, 1245213, 1048577, 10, 1245212, 1048577, 10, 1310762, 1048577, 10, 1310763, 1048577, 10, 1048607, 983041, 5, 1048608, 1048577, 5, 1048609, 1048577, 5, 1048610, 1114113, 5, 1114146, 1114113, 6, 1507362, 524289, 4, 1507363, 589825, 4, 1507361, 458753, 4, 1507359, 131073, 6, 1507360, 131073, 6, 1507364, 131073, 6, 1507365, 131073, 6, 1507366, 131073, 6, 1507367, 131073, 6, 1507368, 131073, 6, 1245225, 1048577, 1610612741, 1179689, 1048577, 1610612741, 1114142, 1048577, 1342177285, 1179678, 1048577, 1342177285, 1572904, 1048577, 5, 1572894, 917505, 5, 851998, 917505, 6, 852009, 917505, 7, 1572905, 917505, 8, 1245216, 983041, 8, 1245217, 1048577, 8, 1179682, 1114113, 6, 1245218, 1179649, 8, 1310757, 1114113, 0, 1376293, 1179649, 8, 1179687, 983041, 8, 1179688, 1048577, 8, 1114151, 131073, 6)
 
 [node name="Polygon2D2" type="Polygon2D" parent="SceneObjects"]
 position = Vector2(486, 61)
@@ -2097,10 +2101,18 @@ polygon = PackedVector2Array(312, 296, 349, 295, 365, 218, 413, 218, 413, 325, 3
 
 [node name="Hearts" type="Node" parent="SceneObjects"]
 
-[node name="Heart" parent="SceneObjects/Hearts" instance=ExtResource("5_r2637")]
-position = Vector2(739, 231)
+[node name="Heart" parent="SceneObjects/Hearts" instance=ExtResource("9_mml5l")]
+position = Vector2(521, 292)
+
+[node name="Spikes" type="Area2D" parent="SceneObjects" groups=["Spikes"]]
+position = Vector2(481, 475)
+script = ExtResource("9_mkrub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Spikes"]
+position = Vector2(124.5, 1.5)
+shape = SubResource("RectangleShape2D_ec6qd")
 
 [connection signal="area_entered" from="SceneObjects/Guy/Area2D" to="SceneObjects/Guy" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="SceneObjects/Exit1" to="SceneObjects/Guy" method="_on_exit_1_area_entered"]
-[connection signal="body_entered" from="SceneObjects/Exit1" to="SceneObjects/Guy" method="_on_exit_1_body_entered"]
-[connection signal="body_entered" from="SceneObjects/Exit1" to="SceneObjects/Exit1" method="_on_body_entered"]
+[connection signal="area_entered" from="SceneObjects/Spikes" to="SceneObjects/Guy" method="_on_spikes_area_entered"]
+[connection signal="body_entered" from="SceneObjects/Spikes" to="." method="_on_spikes_body_entered"]
+[connection signal="body_entered" from="SceneObjects/Spikes" to="SceneObjects/Guy" method="_on_spikes_body_entered"]
