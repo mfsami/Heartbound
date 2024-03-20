@@ -12,6 +12,7 @@ var maxJump = 2
 func _physics_process(delta):
 	var direction = Input.get_axis("Left", "Right")
 	
+	#Movement logic
 	if direction:
 		velocity.x = direction * speed
 		sprite_2d.animation = "Run"
@@ -20,20 +21,24 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, 30)
 		sprite_2d.animation = "idle"
 		
+	#Flipping sprite
 	if direction == 1:
 		sprite_2d.flip_h = false
 	elif direction == -1:
 		sprite_2d.flip_h = true
 		
+	#Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		sprite_2d.animation = "jump"
 		
+	#Reset jump count when on the floor
 	if is_on_floor():
 		jumpCount = 0
 		
+	#Jump logic
 	if Input.is_action_just_pressed("Jump") and jumpCount < maxJump:
-		velocity.y -= jumpForce
+		velocity.y = -jumpForce
 		jumpCount += 1
 		
 
