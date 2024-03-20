@@ -55,6 +55,7 @@ func _on_area_2d_area_entered(area):
 
 # If spikes are touched / Reset to beginning of the level
 func _on_spikes_body_entered(body):
-	if body:
-		position.x = Level2.resetX
-		position.y = Level2.resetY
+	if body.name == "Guy":
+		GameManager.points = 0
+		get_tree().reload_current_scene()
+		print("Reset")

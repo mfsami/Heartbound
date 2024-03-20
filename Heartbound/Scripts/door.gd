@@ -16,7 +16,8 @@ func _on_body_entered(body):
 		
 func _input(_event):
 	if Input.is_action_just_pressed("Enter") and GameManager.points >= GameManager.required1 and inDoor:
-			get_tree().change_scene_to_packed(target_level)
+		GameManager.points = 0
+		get_tree().change_scene_to_packed(target_level)
 
 
 func _on_body_exited(body):
