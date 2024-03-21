@@ -15,7 +15,8 @@ func _physics_process(delta):
 	#Movement logic
 	if direction:
 		velocity.x = direction * speed
-		sprite_2d.animation = "Run"
+		if is_on_floor():
+			sprite_2d.animation = "idle"
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, 30)
@@ -30,7 +31,10 @@ func _physics_process(delta):
 	#Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		sprite_2d.animation = "jump"
+		if velocity.y < 0:
+			sprite_2d.animation = "jump"
+		else:
+			sprite_2d.animation = "idle"
 		
 	#Reset jump count when on the floor
 	if is_on_floor():
