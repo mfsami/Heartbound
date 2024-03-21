@@ -22,7 +22,6 @@ Level2="*res://level2.gd"
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [input]
 
@@ -51,3 +50,5 @@ Enter={
 
 renderer/rendering_method="mobile"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
