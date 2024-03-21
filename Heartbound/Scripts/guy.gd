@@ -6,7 +6,7 @@ var gravity = 2500
 var jumpCount = 0
 var maxJump = 2
 @onready var sprite_2d = $Sprite2D
-
+@onready var animation_player = $AnimationPlayer
 
 
 func _physics_process(delta):
@@ -15,12 +15,18 @@ func _physics_process(delta):
 	#Movement logic
 	if direction:
 		velocity.x = direction * speed
+		animation_player.play("Run")
+			
 		if is_on_floor():
 			sprite_2d.animation = "idle"
 		
 	else:
+		
 		velocity.x = move_toward(velocity.x, 0, 30)
-		sprite_2d.animation = "idle"
+		if animation_player.current_animation == "Run":
+			animation_player.stop()
+			sprite_2d.animation = "idle"
+			
 		
 	#Flipping sprite
 	if direction == 1:
