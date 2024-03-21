@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn1nb231akyux"]
+
+[ext_resource type="Texture2D" uid="uid://yp8badpkgs15" path="res://Sprites/title_00129.png" id="1_s4g5r"]
+[ext_resource type="Texture2D" uid="uid://c6e83n5otn73y" path="res://Sprites/presskey_00096.png" id="2_rujri"]
+
+[node name="Title" type="Node2D"]
+
+[node name="TitleText" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 206.0
+offset_top = 229.0
+offset_right = 930.0
+offset_bottom = 335.0
+texture = ExtResource("1_s4g5r")
+expand_mode = 1
+
+[node name="PresKey" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 377.0
+offset_top = 347.0
+offset_right = 747.0
+offset_bottom = 383.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_rujri")
+expand_mode = 1
