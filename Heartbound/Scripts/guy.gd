@@ -56,12 +56,12 @@ func _physics_process(delta):
 	
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Door1"):
-		position.x = 397
-		position.y = 293
+		position.x = 380
+		position.y = 330
 		
 	if area.is_in_group("Door2"):
-		position.x = 820
-		position.y = 324
+		position.x = 780
+		position.y = 340
 
 # If spikes are touched / Reset to beginning of the level
 func _on_spikes_body_entered(body):

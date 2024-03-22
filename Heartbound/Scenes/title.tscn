@@ -90,9 +90,9 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 279.0
+offset_left = 253.025
 offset_top = 233.0
-offset_right = 938.0
+offset_right = 912.025
 offset_bottom = 346.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -102,9 +102,9 @@ expand_mode = 1
 
 [node name="PresKey" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = 428.0
+offset_left = 405.21
 offset_top = 347.0
-offset_right = 798.0
+offset_right = 775.209
 offset_bottom = 383.0
 size_flags_horizontal = 4
 size_flags_vertical = 4

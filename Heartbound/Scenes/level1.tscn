@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bu4kir7dy3plv" path="res://Scenes/door.tscn" id="10_li0s7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xooos"]
-size = Vector2(17, 38.5)
+size = Vector2(22.9913, 26.6469)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cyk1f"]
 texture = ExtResource("1_y81vf")
@@ -1924,19 +1924,20 @@ script = ExtResource("9_k61r2")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Door" parent="." instance=ExtResource("10_li0s7")]
-position = Vector2(498, 445)
+position = Vector2(465, 443)
 target_level = ExtResource("4_dc1hw")
 
 [node name="SceneObjects" type="Node" parent="."]
 
 [node name="Guy" parent="SceneObjects" instance=ExtResource("1_sxuir")]
-position = Vector2(567, 460)
+position = Vector2(539, 446)
 script = ExtResource("2_08j1m")
 
 [node name="Area2D" type="Area2D" parent="SceneObjects/Guy"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Guy/Area2D"]
-position = Vector2(2.5, 0.75)
+position = Vector2(-0.49585, 4.57764e-05)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xooos")
 
 [node name="TileMap" type="TileMap" parent="SceneObjects"]
@@ -1945,37 +1946,37 @@ position = Vector2(-547, -285)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_wo7ii")
 format = 2
-layer_0/tile_data = PackedInt32Array(1245212, 1048577, 10, 1245213, 1048577, 10, 983070, 1048577, 1879048204, 1048606, 1114113, 11, 1507358, 1048577, 1879048204, 1572894, 983041, 11, 983071, 1114113, 10, 1048607, 1114113, 11, 1245215, 1048577, 9, 1572895, 1048577, 12, 852000, 1048577, 536870924, 917536, 1048577, 11, 1245216, 1048577, 9, 1572896, 1048577, 12, 852001, 1048577, 536870924, 917537, 1048577, 11, 1245217, 1048577, 9, 1572897, 1048577, 12, 852002, 1048577, 536870924, 917538, 1048577, 11, 1245218, 1048577, 9, 1572898, 1048577, 12, 852003, 1048577, 536870924, 917539, 1048577, 11, 1179683, 983041, 10, 1245219, 1245185, 12, 1572899, 1048577, 12, 852004, 1048577, 536870924, 917540, 1048577, 11, 1114148, 1048577, 9, 1572900, 1048577, 12, 852005, 1048577, 536870924, 917541, 1048577, 11, 1114149, 1048577, 9, 1572901, 1048577, 12, 852006, 1048577, 536870924, 917542, 1048577, 11, 1114150, 1048577, 9, 1572902, 1048577, 12, 852007, 1048577, 536870924, 917543, 1048577, 11, 1114151, 1048577, 9, 1507367, 983041, 10, 1572903, 1048577, 12, 852008, 1048577, 536870924, 917544, 1048577, 11, 1114152, 1048577, 9, 1310760, 1048577, 9, 1572904, 1048577, 12, 1048617, 1048577, 1610612748, 1114153, 983041, 11, 1507369, 1048577, 1610612748, 1572905, 1114113, 11, 1310762, 1048577, 10, 1310763, 1048577, 10, 851998, 983041, 9, 851999, 1048577, 536870924, 917534, 1048577, 1879048204, 1310750, 1048577, 1879048204, 1376286, 1048577, 1879048204, 1441822, 1048577, 1879048204, 1441833, 1048577, 1610612748, 1376297, 1048577, 1610612748, 1441831, 983041, 10, 1376295, 983041, 10, 1310759, 983041, 9, 1310761, 983041, 9, 1245214, 1114113, 9, 1114147, 983041, 9, 852009, 1114113, 9, 917545, 1048577, 1073741836, 983081, 1048577, 1073741836)
+layer_0/tile_data = PackedInt32Array(851997, 983041, 9, 917533, 1048577, 1879048204, 983069, 1048577, 1879048204, 1245213, 1114113, 9, 1310749, 1048577, 1879048204, 1376285, 1048577, 1879048204, 1441821, 1048577, 1879048204, 1507357, 1048577, 1879048204, 983070, 1114113, 10, 851999, 1048577, 536870924, 852000, 1048577, 536870924, 852001, 1048577, 536870924, 852002, 1048577, 536870924, 1114146, 983041, 9, 1179682, 983041, 10, 852003, 1048577, 536870924, 852004, 1048577, 536870924, 852005, 1048577, 536870924, 852006, 1048577, 536870924, 1310758, 983041, 9, 1376294, 983041, 10, 1441830, 983041, 10, 1507366, 983041, 10, 852007, 1048577, 536870924, 852008, 1114113, 9, 917544, 1048577, 1073741836, 983080, 1048577, 1073741836, 1048616, 1048577, 1610612748, 1310760, 983041, 9, 1376296, 1048577, 1610612748, 1441832, 1048577, 1610612748, 1507368, 1048577, 1610612748, 1245211, 1048577, 10, 1245212, 1048577, 10, 1048605, 1114113, 11, 1572893, 983041, 11, 851998, 1048577, 536870924, 1048606, 1114113, 11, 1245214, 1048577, 9, 1572894, 1048577, 12, 917535, 1048577, 11, 1245215, 1048577, 9, 1572895, 1048577, 12, 917536, 1048577, 11, 1245216, 1048577, 9, 1572896, 1048577, 12, 917537, 1048577, 11, 1245217, 1048577, 9, 1572897, 1048577, 12, 917538, 1048577, 11, 1245218, 1245185, 12, 1572898, 1048577, 12, 917539, 1048577, 11, 1114147, 1048577, 9, 1572899, 1048577, 12, 917540, 1048577, 11, 1114148, 1048577, 9, 1572900, 1048577, 12, 917541, 1048577, 11, 1114149, 1048577, 9, 1572901, 1048577, 12, 917542, 1048577, 11, 1114150, 1048577, 9, 1572902, 1048577, 12, 917543, 1048577, 11, 1114151, 1048577, 9, 1310759, 1048577, 9, 1572903, 1048577, 12, 1114152, 983041, 11, 1572904, 1114113, 11, 1310761, 1048577, 10, 1310762, 1048577, 10)
 
 [node name="Exit2" type="Area2D" parent="SceneObjects" groups=["Door2"]]
-position = Vector2(392, 287)
+position = Vector2(368, 284)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Exit2"]
-position = Vector2(-28, 1)
+position = Vector2(-49, 0)
 shape = SubResource("RectangleShape2D_6ijim")
 
 [node name="Exit1" type="Area2D" parent="SceneObjects" groups=["Door1"]]
-position = Vector2(809, 324)
+position = Vector2(776, 322)
 script = ExtResource("6_ceieg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Exit1"]
-position = Vector2(41, -5)
+position = Vector2(54, -7)
 shape = SubResource("RectangleShape2D_6ijim")
 
 [node name="Polygon2D2" type="Polygon2D" parent="SceneObjects"]
-position = Vector2(486, 61)
+position = Vector2(454, 65)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(312, 229, 380, 229, 381, 274, 413, 292, 413, 325, 331, 324, 312, 324)
 
 [node name="Polygon2D" type="Polygon2D" parent="SceneObjects"]
-position = Vector2(-1, 32)
+position = Vector2(-33, 29)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(312, 296, 349, 295, 365, 218, 413, 218, 413, 325, 331, 324, 312, 324)
 
 [node name="Hearts" type="Node" parent="SceneObjects"]
 
 [node name="Heart" parent="SceneObjects/Hearts" instance=ExtResource("5_r2637")]
-position = Vector2(739, 231)
+position = Vector2(706, 229)
 
 [connection signal="area_entered" from="SceneObjects/Guy/Area2D" to="SceneObjects/Guy" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SceneObjects/Exit1" to="SceneObjects/Guy" method="_on_exit_1_area_entered"]
