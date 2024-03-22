@@ -102,9 +102,9 @@ expand_mode = 1
 
 [node name="PresKey" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = 405.21
+offset_left = 403.28
 offset_top = 347.0
-offset_right = 775.209
+offset_right = 773.277
 offset_bottom = 383.0
 size_flags_horizontal = 4
 size_flags_vertical = 4

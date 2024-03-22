@@ -87,7 +87,6 @@ autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.492403, -0.615507)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ua03b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
