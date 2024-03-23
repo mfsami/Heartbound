@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bu4kir7dy3plv"]
+[gd_scene load_steps=7 format=3 uid="uid://bu4kir7dy3plv"]
 
 [ext_resource type="Script" path="res://Scripts/door.gd" id="1_6fk0n"]
 [ext_resource type="Texture2D" uid="uid://dnmeh5vx8b78m" path="res://Sprites/Door.png" id="1_vsxba"]
 [ext_resource type="Texture2D" uid="uid://cwa3lb8vpi0ga" path="res://Sprites/DoorOpen.png" id="2_awo76"]
+[ext_resource type="AudioStream" uid="uid://ooed0rl3uodo" path="res://Sounds/DoorEnter.mp3" id="4_40i2o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o5qff"]
 animations = [{
@@ -39,6 +40,10 @@ autoplay = "closed"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_lrtme")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_40i2o")
+volume_db = -2.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

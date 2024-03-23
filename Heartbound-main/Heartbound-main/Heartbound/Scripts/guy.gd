@@ -5,8 +5,11 @@ var jumpForce = 600
 var gravity = 2500
 var jumpCount = 0
 var maxJump = 2
+
+
 @onready var sprite_2d = $Sprite2D
 @onready var animation_player = $AnimationPlayer
+@onready var audio_stream_player = $AudioStreamPlayer
 
 
 func _physics_process(delta):
@@ -16,9 +19,11 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * speed
 		animation_player.play("Run")
+		
 			
 		if is_on_floor():
 			sprite_2d.animation = "idle"
+			
 		
 	else:
 		
@@ -53,6 +58,7 @@ func _physics_process(delta):
 		
 
 	move_and_slide()
+
 	
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Door1"):
