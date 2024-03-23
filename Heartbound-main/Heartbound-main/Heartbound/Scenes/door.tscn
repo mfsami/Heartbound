@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bu4kir7dy3plv"]
+[gd_scene load_steps=11 format=3 uid="uid://bu4kir7dy3plv"]
 
 [ext_resource type="Script" path="res://Scripts/door.gd" id="1_6fk0n"]
 [ext_resource type="Texture2D" uid="uid://dnmeh5vx8b78m" path="res://Sprites/Door.png" id="1_vsxba"]
 [ext_resource type="Texture2D" uid="uid://cwa3lb8vpi0ga" path="res://Sprites/DoorOpen.png" id="2_awo76"]
 [ext_resource type="AudioStream" uid="uid://ooed0rl3uodo" path="res://Sounds/DoorEnter.mp3" id="4_40i2o"]
+[ext_resource type="Script" path="res://Scripts/FadeScreen.gd" id="5_idjor"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o5qff"]
 animations = [{
@@ -27,6 +28,43 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrtme"]
 size = Vector2(42, 54)
 
+[sub_resource type="Animation" id="Animation_jn6xm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j6ec5"]
+resource_name = "fade_to_black"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rk4y2"]
+_data = {
+"RESET": SubResource("Animation_jn6xm"),
+"fade_to_black": SubResource("Animation_j6ec5")
+}
+
 [node name="Door" type="Area2D"]
 script = ExtResource("1_6fk0n")
 
@@ -45,5 +83,22 @@ shape = SubResource("RectangleShape2D_lrtme")
 stream = ExtResource("4_40i2o")
 volume_db = -2.0
 
+[node name="FadeScreen" type="CanvasLayer" parent="."]
+script = ExtResource("5_idjor")
+
+[node name="ColorRect" type="ColorRect" parent="FadeScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FadeScreen"]
+libraries = {
+"": SubResource("AnimationLibrary_rk4y2")
+}
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="animation_finished" from="FadeScreen/AnimationPlayer" to="FadeScreen" method="_on_animation_player_animation_finished"]
