@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://dx3pg2fqsfnrr"]
 
-[ext_resource type="Script" path="res://level2.gd" id="1_6vyrs"]
+[ext_resource type="Script" path="res://Scripts/level2.gd" id="1_54lq3"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_hfx6h"]
 [ext_resource type="PackedScene" uid="uid://bu4kir7dy3plv" path="res://Scenes/door.tscn" id="3_sgftt"]
 [ext_resource type="PackedScene" uid="uid://cwea13xd1i2q5" path="res://Scenes/guy.tscn" id="4_7akis"]
@@ -8,8 +8,8 @@
 [ext_resource type="Script" path="res://Scripts/guy.gd" id="5_3pji3"]
 [ext_resource type="Texture2D" uid="uid://cqpdsmc17lnis" path="res://Sprites/TILES.png" id="6_x7t3m"]
 [ext_resource type="Texture2D" uid="uid://bcfelaside18e" path="res://Sprites/Tilemap1.png" id="7_c1kgg"]
-[ext_resource type="Script" path="res://Spikes.gd" id="9_mkrub"]
 [ext_resource type="PackedScene" uid="uid://bhhfsgpl23k1u" path="res://Scenes/heart.tscn" id="9_mml5l"]
+[ext_resource type="Script" path="res://Scripts/Spikes.gd" id="10_aea00"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xooos"]
 size = Vector2(17, 38.5)
@@ -2067,7 +2067,7 @@ size = Vector2(25, 13)
 size = Vector2(20, 60)
 
 [node name="Node" type="Node"]
-script = ExtResource("1_6vyrs")
+script = ExtResource("1_54lq3")
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -2109,7 +2109,7 @@ position = Vector2(507, 302)
 
 [node name="Spikes" type="Area2D" parent="Spikes" groups=["Spikes"]]
 position = Vector2(449, 475)
-script = ExtResource("9_mkrub")
+script = ExtResource("10_aea00")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes"]
 position = Vector2(124, 4)
@@ -2117,7 +2117,7 @@ shape = SubResource("RectangleShape2D_p3ttk")
 
 [node name="Spikes2" type="Area2D" parent="Spikes" groups=["Spikes"]]
 position = Vector2(684, 288)
-script = ExtResource("9_mkrub")
+script = ExtResource("10_aea00")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes2"]
 position = Vector2(1.5, -4.5)
@@ -2125,7 +2125,7 @@ shape = SubResource("RectangleShape2D_ec6qd")
 
 [node name="Spikes3" type="Area2D" parent="Spikes" groups=["Spikes"]]
 position = Vector2(416, 359)
-script = ExtResource("9_mkrub")
+script = ExtResource("10_aea00")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes3"]
 position = Vector2(1.5, -3)
@@ -2133,7 +2133,7 @@ shape = SubResource("RectangleShape2D_wdm75")
 
 [node name="Spikes4" type="Area2D" parent="Spikes" groups=["Spikes"]]
 position = Vector2(620, 175)
-script = ExtResource("9_mkrub")
+script = ExtResource("10_aea00")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes4"]
 position = Vector2(1.5, -4.5)

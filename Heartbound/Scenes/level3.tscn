@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://cdj35kknuvvmp"]
+[gd_scene load_steps=16 format=3 uid="uid://cdj35kknuvvmp"]
 
-[ext_resource type="Script" path="res://level2.gd" id="1_tffes"]
+[ext_resource type="Script" path="res://Scripts/level2.gd" id="1_0f8hs"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_ji7ba"]
 [ext_resource type="PackedScene" uid="uid://bu4kir7dy3plv" path="res://Scenes/door.tscn" id="3_660kj"]
 [ext_resource type="PackedScene" uid="uid://cwea13xd1i2q5" path="res://Scenes/guy.tscn" id="4_rohyh"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cqpdsmc17lnis" path="res://Sprites/TILES.png" id="6_6q7re"]
 [ext_resource type="Texture2D" uid="uid://bcfelaside18e" path="res://Sprites/Tilemap1.png" id="7_lmnug"]
 [ext_resource type="PackedScene" uid="uid://bhhfsgpl23k1u" path="res://Scenes/heart.tscn" id="8_etggu"]
-[ext_resource type="Script" path="res://Spikes.gd" id="9_pihtt"]
+[ext_resource type="Script" path="res://Scripts/Spikes.gd" id="9_30hqh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xooos"]
 size = Vector2(23, 27)
@@ -1430,15 +1430,15 @@ separation = Vector2i(1, 1)
 7:11/0 = 0
 7:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:11/0/physics_layer_0/angular_velocity = 0.0
-7:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -5.875, 8, -7, 8, 8, -6.125, 8, -5.875, 0.75, -3.5, -3.625)
 8:11/0 = 0
 8:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:11/0/physics_layer_0/angular_velocity = 0.0
-8:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -5.875, 8, -6, 8, 6.25, -8, 6.75, -8, 0.5, -8, -6.125)
 9:11/0 = 0
 9:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:11/0/physics_layer_0/angular_velocity = 0.0
-9:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.25, -5.75, 3.625, -3.25, 6.25, 1.125, 6.25, 8, -8, 8, -8, -6.125)
 10:11/0 = 0
 10:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:11/0/physics_layer_0/angular_velocity = 0.0
@@ -1504,14 +1504,14 @@ separation = Vector2i(1, 1)
 7:12/0 = 0
 7:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:12/0/physics_layer_0/angular_velocity = 0.0
-7:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.875, -8, 6, -8, 6.5, 8, -5.875, 8)
 8:12/0 = 0
 8:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:12/0/physics_layer_0/angular_velocity = 0.0
 9:12/0 = 0
 9:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:12/0/physics_layer_0/angular_velocity = 0.0
-9:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.875, -8, 6, -8, 6.5, 8, -5.875, 8)
 10:12/0 = 0
 10:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:12/0/physics_layer_0/angular_velocity = 0.0
@@ -1577,7 +1577,7 @@ separation = Vector2i(1, 1)
 7:13/0 = 0
 7:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:13/0/physics_layer_0/angular_velocity = 0.0
-7:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.875, -8, 8, -8, 8, 7.25, 1.03681, 5.94503, -1.75, 5.375, -5.75, 1)
 8:13/0 = 0
 8:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:13/0/physics_layer_0/angular_velocity = 0.0
@@ -1585,7 +1585,7 @@ separation = Vector2i(1, 1)
 9:13/0 = 0
 9:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:13/0/physics_layer_0/angular_velocity = 0.0
-9:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 6.5, -8, 6.125, -0.25, 3.375, 4.25, 0, 5.625, -8, 7)
 10:13/0 = 0
 10:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:13/0/physics_layer_0/angular_velocity = 0.0
@@ -2083,16 +2083,13 @@ sources/0 = SubResource("TileSetAtlasSource_cyk1f")
 sources/1 = SubResource("TileSetAtlasSource_y5rgv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3ttk"]
-size = Vector2(317, 20)
+size = Vector2(56, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ec6qd"]
-size = Vector2(25, 13)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdm75"]
-size = Vector2(20, 60)
+size = Vector2(27.5, 13)
 
 [node name="Node" type="Node"]
-script = ExtResource("1_tffes")
+script = ExtResource("1_0f8hs")
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -2101,7 +2098,7 @@ script = ExtResource("2_ji7ba")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Door" parent="." instance=ExtResource("3_660kj")]
-position = Vector2(705, 194)
+position = Vector2(696, 442)
 scale = Vector2(1.03, 1.03)
 
 [node name="SceneObjects" type="Node" parent="."]
@@ -2122,57 +2119,46 @@ position = Vector2(-547, -285)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_wo7ii")
 format = 2
-layer_0/tile_data = PackedInt32Array(851997, 655361, 536870923, 1048605, 720897, 1342177292, 1245213, 720897, 1342177292, 1310749, 720897, 1342177292, 1507357, 720897, 1342177292, 1572893, 655361, 11, 851998, 720897, 536870924, 1572894, 720897, 12, 851999, 720897, 536870924, 1572895, 720897, 12, 852000, 720897, 536870924, 1572896, 720897, 12, 852001, 720897, 536870924, 1572897, 720897, 12, 852002, 720897, 536870924, 1572898, 720897, 12, 852003, 720897, 536870924, 1572899, 720897, 12, 852004, 720897, 536870924, 1572900, 720897, 12, 852005, 720897, 536870924, 1572901, 720897, 12, 852006, 720897, 536870924, 1572902, 720897, 12, 852007, 720897, 536870924, 1572903, 720897, 12, 917533, 720897, 1342177292, 983069, 720897, 1342177292, 1114141, 720897, 1342177292, 1179677, 720897, 1342177292, 1376285, 720897, 1342177292, 1441821, 720897, 1342177292, 852008, 786433, 536870923, 917544, 720897, 1610612748, 983080, 720897, 1610612748, 1048616, 720897, 1610612748, 1114152, 720897, 1610612748, 1179688, 720897, 1610612748, 1245224, 720897, 1610612748, 1310760, 720897, 1610612748, 1376296, 720897, 1610612748, 1441832, 720897, 1610612748, 1507368, 720897, 1610612748, 1572904, 786433, 11, 1048607, 262145, 1, 1114143, 262145, 2, 917536, 196609, 0, 983072, 327681, 0, 1114144, 327681, 2, 1048609, 393217, 1, 1114145, 393217, 2, 1048608, 327681, 1, 1507361, 458753, 12, 1441825, 458753, 11, 1441826, 524289, 11, 1441827, 589825, 13, 1376291, 458753, 12, 1310755, 458753, 12, 1245219, 458753, 11, 1245220, 524289, 11, 1114151, 458753, 11, 1179687, 458753, 12, 1245223, 458753, 12, 1310759, 458753, 12, 1376295, 458753, 12, 1441831, 458753, 12, 1507367, 458753, 13, 1245221, 589825, 11, 1310757, 458753, 12, 1376293, 458753, 12, 1441829, 458753, 12, 1507365, 458753, 13, 1507366, 589825, 11, 1048615, 524289, 11, 1048614, 524289, 11, 1048613, 458753, 11, 1114149, 458753, 13)
+layer_0/tile_data = PackedInt32Array(851997, 655361, 536870923, 1048605, 720897, 1342177292, 1245213, 720897, 1342177292, 1310749, 720897, 1342177292, 1507357, 720897, 1342177292, 1572893, 655361, 11, 851998, 720897, 536870924, 1572894, 720897, 12, 851999, 720897, 536870924, 1572895, 720897, 12, 852000, 720897, 536870924, 1572896, 720897, 12, 852001, 720897, 536870924, 1572897, 720897, 12, 852002, 720897, 536870924, 1572898, 720897, 12, 852003, 720897, 536870924, 1572899, 720897, 12, 852004, 720897, 536870924, 1572900, 720897, 12, 852005, 720897, 536870924, 1572901, 720897, 12, 852006, 720897, 536870924, 1572902, 720897, 12, 852007, 720897, 536870924, 1572903, 720897, 12, 917533, 720897, 1342177292, 983069, 720897, 1342177292, 1114141, 720897, 1342177292, 1179677, 720897, 1342177292, 1376285, 720897, 1342177292, 1441821, 720897, 1342177292, 852008, 786433, 536870923, 917544, 720897, 1610612748, 983080, 720897, 1610612748, 1048616, 720897, 1610612748, 1114152, 720897, 1610612748, 1179688, 720897, 1610612748, 1245224, 720897, 1610612748, 1310760, 720897, 1610612748, 1376296, 720897, 1610612748, 1441832, 720897, 1610612748, 1507368, 720897, 1610612748, 1572904, 786433, 11, 1245223, 524289, 11, 1245222, 524289, 11, 1245214, 524289, 11, 1245215, 524289, 11, 1245216, 524289, 11, 1245217, 589825, 11, 1245221, 524289, 11, 1310757, 524289, 11, 1310753, 589825, 13, 1310752, 524289, 11, 1310751, 524289, 11, 1310750, 524289, 11, 1310758, 524289, 11, 1310759, 524289, 11, 1245220, 458753, 11, 1310756, 458753, 13, 1507362, 131073, 6, 1507363, 131073, 6, 1048612, 262145, 1, 1114148, 262145, 2, 917541, 196609, 0, 983077, 327681, 0, 1048613, 327681, 1, 1114149, 327681, 2, 1048614, 393217, 1, 1114150, 393217, 2, 1048608, 327681, 1, 1114144, 327681, 2, 1048609, 393217, 1, 1114145, 393217, 2, 1048607, 262145, 1, 1114143, 262145, 2, 917536, 196609, 0, 983072, 327681, 0, 1179678, 131073, 6, 1179687, 131073, 6)
 
 [node name="Hearts" type="Node" parent="SceneObjects"]
 
 [node name="Heart" parent="SceneObjects/Hearts" instance=ExtResource("8_etggu")]
-position = Vector2(493, 243)
+position = Vector2(573, 209)
 
 [node name="Spikes" type="Node" parent="."]
 
 [node name="Spikes" type="Area2D" parent="Spikes" groups=["Spikes"]]
 position = Vector2(458, 477)
-script = ExtResource("9_pihtt")
+script = ExtResource("9_30hqh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes"]
-position = Vector2(125, 74)
+position = Vector2(115, 1)
 shape = SubResource("RectangleShape2D_p3ttk")
-
-[node name="Spikes2" type="Area2D" parent="Spikes" groups=["Spikes"]]
-position = Vector2(684, 288)
-script = ExtResource("9_pihtt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes2"]
-position = Vector2(1.5, -4.5)
-shape = SubResource("RectangleShape2D_ec6qd")
-
-[node name="Spikes3" type="Area2D" parent="Spikes" groups=["Spikes"]]
-position = Vector2(416, 359)
-script = ExtResource("9_pihtt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes3"]
-position = Vector2(1.5, -3)
-shape = SubResource("RectangleShape2D_wdm75")
 
 [node name="Spikes4" type="Area2D" parent="Spikes" groups=["Spikes"]]
 position = Vector2(620, 175)
-script = ExtResource("9_pihtt")
+script = ExtResource("9_30hqh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes4"]
-position = Vector2(1.5, -4.5)
+position = Vector2(-190, 143)
+shape = SubResource("RectangleShape2D_ec6qd")
+
+[node name="Spikes5" type="Area2D" parent="Spikes" groups=["Spikes"]]
+position = Vector2(1240, 350)
+script = ExtResource("9_30hqh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes5"]
+position = Vector2(-523.25, -33)
 shape = SubResource("RectangleShape2D_ec6qd")
 
 [connection signal="area_entered" from="SceneObjects/Guy/Area2D" to="SceneObjects/Guy" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Spikes/Spikes" to="SceneObjects/Guy" method="_on_spikes_area_entered"]
 [connection signal="body_entered" from="Spikes/Spikes" to="." method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="Spikes/Spikes" to="SceneObjects/Guy" method="_on_spikes_body_entered"]
-[connection signal="area_entered" from="Spikes/Spikes2" to="SceneObjects/Guy" method="_on_spikes_area_entered"]
-[connection signal="body_entered" from="Spikes/Spikes2" to="." method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/Spikes2" to="SceneObjects/Guy" method="_on_spikes_body_entered"]
-[connection signal="area_entered" from="Spikes/Spikes3" to="SceneObjects/Guy" method="_on_spikes_area_entered"]
-[connection signal="body_entered" from="Spikes/Spikes3" to="." method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/Spikes3" to="SceneObjects/Guy" method="_on_spikes_body_entered"]
 [connection signal="area_entered" from="Spikes/Spikes4" to="SceneObjects/Guy" method="_on_spikes_area_entered"]
 [connection signal="body_entered" from="Spikes/Spikes4" to="." method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="Spikes/Spikes4" to="SceneObjects/Guy" method="_on_spikes_body_entered"]
+[connection signal="area_entered" from="Spikes/Spikes5" to="SceneObjects/Guy" method="_on_spikes_area_entered"]
+[connection signal="body_entered" from="Spikes/Spikes5" to="." method="_on_spikes_body_entered"]
+[connection signal="body_entered" from="Spikes/Spikes5" to="SceneObjects/Guy" method="_on_spikes_body_entered"]

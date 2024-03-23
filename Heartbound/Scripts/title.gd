@@ -1,9 +1,11 @@
 extends Node2D
 
 @export var target_level : PackedScene
+@onready var audio_stream_player = $AudioStreamPlayer
 
 func _input(_event):
 	if Input.is_anything_pressed():
+		audio_stream_player.play()
 		$FadeScreen.transition()
 		
 

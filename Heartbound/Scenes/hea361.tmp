@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://bhhfsgpl23k1u"]
+[gd_scene load_steps=27 format=3 uid="uid://bhhfsgpl23k1u"]
 
 [ext_resource type="Script" path="res://Scripts/heart.gd" id="1_8sfcv"]
 [ext_resource type="Texture2D" uid="uid://uaaffohx7woa" path="res://Sprites/HeartIdle.png" id="1_f1lo2"]
+[ext_resource type="AudioStream" uid="uid://pd2ihbrvnkle" path="res://Sounds/HeartCollect.mp3" id="3_m4o0d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_myynn"]
 atlas = ExtResource("1_f1lo2")
@@ -177,6 +178,8 @@ frame_progress = 0.25733
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_8nkxp")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_m4o0d")
+volume_db = 8.933
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

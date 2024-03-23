@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bn1nb231akyux"]
+[gd_scene load_steps=13 format=3 uid="uid://bn1nb231akyux"]
 
 [ext_resource type="Script" path="res://Scripts/title.gd" id="1_17etm"]
 [ext_resource type="Texture2D" uid="uid://yp8badpkgs15" path="res://Sprites/title_00129.png" id="1_s4g5r"]
 [ext_resource type="PackedScene" uid="uid://c544bmsqtd2eu" path="res://Scenes/level1.tscn" id="2_lh72p"]
 [ext_resource type="Texture2D" uid="uid://c6e83n5otn73y" path="res://Sprites/presskey_00096.png" id="2_rujri"]
 [ext_resource type="Script" path="res://Scripts/FadeScreen.gd" id="5_hhkk0"]
+[ext_resource type="AudioStream" uid="uid://lbnx7cvbs06a" path="res://Sounds/Start.mp3" id="6_mig8g"]
 
 [sub_resource type="Animation" id="Animation_vbkd3"]
 resource_name = "Blink"
@@ -132,6 +133,10 @@ color = Color(0, 0, 0, 0)
 libraries = {
 "": SubResource("AnimationLibrary_rk4y2")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_mig8g")
+volume_db = -2.0
 
 [connection signal="transitioned" from="FadeScreen" to="." method="_on_fade_screen_transitioned"]
 [connection signal="animation_finished" from="FadeScreen/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

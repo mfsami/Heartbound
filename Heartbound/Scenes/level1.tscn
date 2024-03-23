@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://c544bmsqtd2eu"]
+[gd_scene load_steps=15 format=3 uid="uid://c544bmsqtd2eu"]
 
 [ext_resource type="Script" path="res://Scripts/level1.gd" id="1_b28am"]
 [ext_resource type="PackedScene" uid="uid://cwea13xd1i2q5" path="res://Scenes/guy.tscn" id="1_sxuir"]
 [ext_resource type="Texture2D" uid="uid://cqpdsmc17lnis" path="res://Sprites/TILES.png" id="1_y81vf"]
 [ext_resource type="Script" path="res://Scripts/guy.gd" id="2_08j1m"]
-[ext_resource type="PackedScene" uid="uid://dx3pg2fqsfnrr" path="res://Scenes/level2.tscn" id="4_dc1hw"]
 [ext_resource type="Texture2D" uid="uid://bcfelaside18e" path="res://Sprites/Tilemap1.png" id="4_lum2i"]
 [ext_resource type="PackedScene" uid="uid://bhhfsgpl23k1u" path="res://Scenes/heart.tscn" id="5_r2637"]
 [ext_resource type="Script" path="res://Scripts/Exit1.gd" id="6_ceieg"]
@@ -1925,7 +1924,6 @@ script = ExtResource("9_k61r2")
 
 [node name="Door" parent="." instance=ExtResource("10_li0s7")]
 position = Vector2(465, 447)
-target_level = ExtResource("4_dc1hw")
 
 [node name="SceneObjects" type="Node" parent="."]
 
