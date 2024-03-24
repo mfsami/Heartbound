@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://ehlpd3dbh76o"]
+
+[ext_resource type="PackedScene" uid="uid://bhhfsgpl23k1u" path="res://Scenes/heart.tscn" id="1_vyvog"]
+
+[sub_resource type="Animation" id="Animation_gcvcm"]
+resource_name = "Rise"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.1, 3.1),
+"transitions": PackedFloat32Array(0.189465, 0.189465),
+"update": 0,
+"values": [Vector2(260, 691), Vector2(260, 450)]
+}
+
+[sub_resource type="Animation" id="Animation_ov2k4"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.183011, 0.189),
+"update": 0,
+"values": [Vector2(572, 693), Vector2(572, 449)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qmowc"]
+_data = {
+"RESET": SubResource("Animation_ov2k4"),
+"Rise": SubResource("Animation_gcvcm")
+}
+
+[node name="FinalCutscene" type="Node2D"]
+
+[node name="Hearts" type="Node" parent="."]
+
+[node name="Heart" parent="Hearts" instance=ExtResource("1_vyvog")]
+position = Vector2(572, 693)
+scale = Vector2(3, 3)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hearts/Heart"]
+libraries = {
+"": SubResource("AnimationLibrary_qmowc")
+}
+
+[node name="Heart2" parent="Hearts" instance=ExtResource("1_vyvog")]
+position = Vector2(572, 693)
+scale = Vector2(3, 3)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hearts/Heart2"]
+root_node = NodePath("../../Heart2")
+libraries = {
+"": SubResource("AnimationLibrary_qmowc")
+}

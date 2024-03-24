@@ -1,15 +1,16 @@
 extends CharacterBody2D
 
+
 var speed = 200
 var jumpForce = 600
 var gravity = 2500
 var jumpCount = 0
 var maxJump = 2
 
-
+@onready var audio_stream_player = $AudioStreamPlayer
 @onready var sprite_2d = $Sprite2D
 @onready var animation_player = $AnimationPlayer
-@onready var audio_stream_player = $AudioStreamPlayer
+@onready var heartSound = $AudioStreamPlayer
 
 
 func _physics_process(delta):
@@ -68,6 +69,8 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("Door2"):
 		position.x = 780
 		position.y = 340
+		
+		
 
 # If spikes are touched / Reset to beginning of the level
 func _on_spikes_body_entered(body):
