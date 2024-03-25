@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dx3pg2fqsfnrr"]
+[gd_scene load_steps=21 format=3 uid="uid://dx3pg2fqsfnrr"]
 
 [ext_resource type="Script" path="res://Scripts/level2.gd" id="1_54lq3"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_hfx6h"]
@@ -2057,6 +2057,44 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cyk1f")
 sources/1 = SubResource("TileSetAtlasSource_y5rgv")
 
+[sub_resource type="Animation" id="Animation_fuedg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(507, 297)]
+}
+
+[sub_resource type="Animation" id="Animation_rjfer"]
+resource_name = "Rise"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(507, 290), Vector2(507, 285), Vector2(507, 290)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oxqpi"]
+_data = {
+"RESET": SubResource("Animation_fuedg"),
+"Rise": SubResource("Animation_rjfer")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3ttk"]
 size = Vector2(317, 20)
 
@@ -2103,7 +2141,12 @@ layer_0/tile_data = PackedInt32Array(851997, 655361, 536870923, 1048605, 1048577
 [node name="Hearts" type="Node" parent="SceneObjects"]
 
 [node name="Heart" parent="SceneObjects/Hearts" instance=ExtResource("9_mml5l")]
-position = Vector2(507, 302)
+position = Vector2(507, 288.148)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneObjects/Hearts/Heart"]
+libraries = {
+"": SubResource("AnimationLibrary_oxqpi")
+}
 
 [node name="Spikes" type="Node" parent="."]
 

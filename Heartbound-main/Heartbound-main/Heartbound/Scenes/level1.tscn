@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c544bmsqtd2eu"]
+[gd_scene load_steps=19 format=3 uid="uid://c544bmsqtd2eu"]
 
 [ext_resource type="Script" path="res://Scripts/level1.gd" id="1_b28am"]
 [ext_resource type="PackedScene" uid="uid://cwea13xd1i2q5" path="res://Scenes/guy.tscn" id="1_sxuir"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" path="res://Scripts/Exit1.gd" id="6_ceieg"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="9_k61r2"]
 [ext_resource type="PackedScene" uid="uid://bu4kir7dy3plv" path="res://Scenes/door.tscn" id="10_li0s7"]
-[ext_resource type="AudioStream" uid="uid://pd2ihbrvnkle" path="res://Sounds/HeartCollect.mp3" id="11_seuui"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xooos"]
 size = Vector2(22.9913, 26.6469)
@@ -1915,6 +1914,44 @@ sources/1 = SubResource("TileSetAtlasSource_y5rgv")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ijim"]
 size = Vector2(40.125, 72)
 
+[sub_resource type="Animation" id="Animation_lxai1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(702, 227)]
+}
+
+[sub_resource type="Animation" id="Animation_j2n44"]
+resource_name = "Rise"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(702, 225), Vector2(702, 220), Vector2(702, 225)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1bduw"]
+_data = {
+"RESET": SubResource("Animation_lxai1"),
+"Rise": SubResource("Animation_j2n44")
+}
+
 [node name="Node" type="Node"]
 script = ExtResource("1_b28am")
 
@@ -1976,11 +2013,13 @@ polygon = PackedVector2Array(312, 296, 349, 295, 365, 218, 413, 218, 413, 325, 3
 [node name="Hearts" type="Node" parent="SceneObjects"]
 
 [node name="Heart" parent="SceneObjects/Hearts" instance=ExtResource("5_r2637")]
-position = Vector2(706, 229)
+position = Vector2(702, 227)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_seuui")
-volume_db = -2.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneObjects/Hearts/Heart"]
+libraries = {
+"": SubResource("AnimationLibrary_1bduw")
+}
+speed_scale = 1.337
 
 [connection signal="area_entered" from="SceneObjects/Guy/Area2D" to="SceneObjects/Guy" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SceneObjects/Exit1" to="SceneObjects/Guy" method="_on_exit_1_area_entered"]
