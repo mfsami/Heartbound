@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://cdj35kknuvvmp"]
+[gd_scene load_steps=20 format=3 uid="uid://cdj35kknuvvmp"]
 
 [ext_resource type="Script" path="res://Scripts/level2.gd" id="1_0f8hs"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_ji7ba"]
 [ext_resource type="PackedScene" uid="uid://bu4kir7dy3plv" path="res://Scenes/door.tscn" id="3_660kj"]
+[ext_resource type="PackedScene" uid="uid://ehlpd3dbh76o" path="res://Scenes/FinalCutscene.tscn" id="4_jahdx"]
 [ext_resource type="PackedScene" uid="uid://cwea13xd1i2q5" path="res://Scenes/guy.tscn" id="4_rohyh"]
 [ext_resource type="Script" path="res://Scripts/guy.gd" id="5_6bvqw"]
 [ext_resource type="Texture2D" uid="uid://cqpdsmc17lnis" path="res://Sprites/TILES.png" id="6_6q7re"]
@@ -2082,6 +2083,21 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cyk1f")
 sources/1 = SubResource("TileSetAtlasSource_y5rgv")
 
+[sub_resource type="Animation" id="Animation_24v00"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(573, 215)]
+}
+
 [sub_resource type="Animation" id="Animation_ipn5y"]
 resource_name = "Rise"
 length = 3.0
@@ -2097,21 +2113,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(-2, -2, -2),
 "update": 0,
 "values": [Vector2(573, 215), Vector2(573, 210), Vector2(573, 215)]
-}
-
-[sub_resource type="Animation" id="Animation_24v00"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(573, 215)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ho0vu"]
@@ -2138,6 +2139,7 @@ script = ExtResource("2_ji7ba")
 [node name="Door" parent="." instance=ExtResource("3_660kj")]
 position = Vector2(696, 442)
 scale = Vector2(1.03, 1.03)
+target_level = ExtResource("4_jahdx")
 
 [node name="SceneObjects" type="Node" parent="."]
 

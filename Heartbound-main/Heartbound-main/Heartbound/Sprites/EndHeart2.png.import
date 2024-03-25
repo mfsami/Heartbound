@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://31rlhrkyltoo"
-path="res://.godot/imported/SkeleRun.png-9fb0db6b705817cfb3e85968a1320ede.ctex"
+uid="uid://bpqobnxvl6gou"
+path="res://.godot/imported/EndHeart2.png-0a65fcf9193237f760778d525970d420.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SkeleRun.png"
-dest_files=["res://.godot/imported/SkeleRun.png-9fb0db6b705817cfb3e85968a1320ede.ctex"]
+source_file="res://Sprites/EndHeart2.png"
+dest_files=["res://.godot/imported/EndHeart2.png-0a65fcf9193237f760778d525970d420.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4dn0qhx6tau"
-path="res://.godot/imported/1bit 16px patterns and tiles.png-d7d153e539af157df19fe0fcd078c539.ctex"
+uid="uid://mval3uf5cqgu"
+path="res://.godot/imported/EndHeart4.png-94cfa26a0bdfa375521b32650529e9c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/1bit 16px patterns and tiles.png"
-dest_files=["res://.godot/imported/1bit 16px patterns and tiles.png-d7d153e539af157df19fe0fcd078c539.ctex"]
+source_file="res://Sprites/EndHeart4.png"
+dest_files=["res://.godot/imported/EndHeart4.png-94cfa26a0bdfa375521b32650529e9c1.ctex"]
 
 [params]
 
