@@ -598,7 +598,7 @@ _data = {
 script = ExtResource("1_5nigj")
 
 [node name="Heart1" type="AnimatedSprite2D" parent="Hearts"]
-position = Vector2(570.914, 171.085)
+position = Vector2(571, 171)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tiyym")
 
@@ -608,7 +608,7 @@ libraries = {
 }
 
 [node name="Heart2" type="AnimatedSprite2D" parent="Hearts"]
-position = Vector2(572, 711)
+position = Vector2(572, 241.35)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tiyym")
 
@@ -618,7 +618,7 @@ libraries = {
 }
 
 [node name="Heart3" type="AnimatedSprite2D" parent="Hearts"]
-position = Vector2(830, 711)
+position = Vector2(614, 204)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tiyym")
 
