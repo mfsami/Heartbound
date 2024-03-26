@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://ehlpd3dbh76o"]
+[gd_scene load_steps=28 format=3 uid="uid://ehlpd3dbh76o"]
 
 [ext_resource type="Script" path="res://Scripts/HeartsFinal.gd" id="1_5nigj"]
 [ext_resource type="Texture2D" uid="uid://uaaffohx7woa" path="res://Sprites/HeartIdle.png" id="1_xt46h"]
@@ -24,33 +24,6 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
-
-[sub_resource type="Animation" id="Animation_6ugk8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(572, 711)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_mup4e"]
 resource_name = "Up"
@@ -138,7 +111,6 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_01rre"]
 _data = {
-"RESET": SubResource("Animation_6ugk8"),
 "Up": SubResource("Animation_mup4e"),
 "Up2": SubResource("Animation_04crv"),
 "Up3": SubResource("Animation_4kbxl")
@@ -196,60 +168,8 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_qwfj1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(571, 173)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eqsti"]
 _data = {
-"RESET": SubResource("Animation_qwfj1"),
 "Shake1": SubResource("Animation_882kw")
 }
 
@@ -293,48 +213,8 @@ tracks/2/keys = {
 "values": [false, false, true, true, false]
 }
 
-[sub_resource type="Animation" id="Animation_upmwv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(572, 176)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.0349066]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ebc6o"]
 _data = {
-"RESET": SubResource("Animation_upmwv"),
 "Shake2": SubResource("Animation_q3ec7")
 }
 
@@ -378,48 +258,8 @@ tracks/2/keys = {
 "values": [-0.0523599, 0.0349066, 0.0, 0.0, 0.0349066]
 }
 
-[sub_resource type="Animation" id="Animation_gbrm2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.0523599]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(569, 176)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kn88p"]
 _data = {
-"RESET": SubResource("Animation_gbrm2"),
 "Shake3": SubResource("Animation_n1csi")
 }
 
@@ -463,48 +303,8 @@ tracks/2/keys = {
 "values": [false, false, true]
 }
 
-[sub_resource type="Animation" id="Animation_00dyq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(571, 173)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gx0ip"]
 _data = {
-"RESET": SubResource("Animation_00dyq"),
 "Shake4": SubResource("Animation_bdhma")
 }
 
@@ -524,24 +324,8 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_28vrs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m2gik"]
 _data = {
-"RESET": SubResource("Animation_28vrs"),
 "fadeIn": SubResource("Animation_34nq5")
 }
 
@@ -573,24 +357,8 @@ tracks/1/keys = {
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_frvjl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q4pq7"]
 _data = {
-"RESET": SubResource("Animation_frvjl"),
 "ToBlack": SubResource("Animation_e3w1d")
 }
 
@@ -600,7 +368,7 @@ _data = {
 script = ExtResource("1_5nigj")
 
 [node name="Heart1" type="AnimatedSprite2D" parent="Hearts"]
-position = Vector2(503.726, 237.777)
+position = Vector2(300, 711)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tiyym")
 
@@ -610,7 +378,7 @@ libraries = {
 }
 
 [node name="Heart2" type="AnimatedSprite2D" parent="Hearts"]
-position = Vector2(572, 241.35)
+position = Vector2(300, 711)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tiyym")
 
@@ -620,7 +388,7 @@ libraries = {
 }
 
 [node name="Heart3" type="AnimatedSprite2D" parent="Hearts"]
-position = Vector2(614, 204)
+position = Vector2(300, 711)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tiyym")
 
@@ -631,7 +399,7 @@ libraries = {
 
 [node name="BigHeart1" type="Sprite2D" parent="Hearts"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(571, 173)
+position = Vector2(571, 200.135)
 scale = Vector2(2.02344, 2.02344)
 texture = ExtResource("3_347rn")
 
@@ -646,7 +414,7 @@ volume_db = -2.0
 
 [node name="BigHeart2" type="Sprite2D" parent="Hearts"]
 visible = false
-position = Vector2(572, 176)
+position = Vector2(572, 206)
 rotation = -0.0349066
 scale = Vector2(2, 2)
 texture = ExtResource("4_ka657")
@@ -661,7 +429,8 @@ stream = ExtResource("4_xcmj1")
 volume_db = -2.0
 
 [node name="BigHeart3" type="Sprite2D" parent="Hearts"]
-position = Vector2(569, 176)
+visible = false
+position = Vector2(569, 203)
 rotation = -0.0523599
 scale = Vector2(2, 2)
 texture = ExtResource("5_5r40j")
@@ -676,7 +445,9 @@ stream = ExtResource("4_xcmj1")
 volume_db = -2.0
 
 [node name="BigHeart4" type="Sprite2D" parent="Hearts"]
-position = Vector2(571, 173)
+visible = false
+position = Vector2(571, 200)
+rotation = 0.0349066
 scale = Vector2(2, 2)
 texture = ExtResource("6_3007w")
 
@@ -686,6 +457,7 @@ libraries = {
 }
 
 [node name="Restored" type="Sprite2D" parent="Hearts"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(575, 372)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("7_m4ntv")
