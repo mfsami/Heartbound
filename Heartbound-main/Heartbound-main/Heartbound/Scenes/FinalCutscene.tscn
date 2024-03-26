@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ehlpd3dbh76o"]
+[gd_scene load_steps=34 format=3 uid="uid://ehlpd3dbh76o"]
 
 [ext_resource type="Script" path="res://Scripts/HeartsFinal.gd" id="1_5nigj"]
 [ext_resource type="Texture2D" uid="uid://uaaffohx7woa" path="res://Sprites/HeartIdle.png" id="1_xt46h"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://803uuss1xmn" path="res://Sprites/EndHeart3.png" id="5_5r40j"]
 [ext_resource type="Texture2D" uid="uid://mval3uf5cqgu" path="res://Sprites/EndHeart4.png" id="6_3007w"]
 [ext_resource type="Texture2D" uid="uid://b5q1h7fngkaa2" path="res://Sprites/Restored_00050.png" id="7_m4ntv"]
+[ext_resource type="AudioStream" uid="uid://df3ab6ladrcoe" path="res://Sounds/Choir.mp3" id="8_j2ni4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8do1f"]
 atlas = ExtResource("1_xt46h")
@@ -516,7 +517,7 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(7.5, 10.7),
+"times": PackedFloat32Array(7.5, 11.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -680,6 +681,10 @@ texture = ExtResource("7_m4ntv")
 libraries = {
 "": SubResource("AnimationLibrary_m2gik")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Hearts/Restored"]
+stream = ExtResource("8_j2ni4")
+volume_db = -2.0
 
 [node name="Polygon2D" type="Polygon2D" parent="Hearts"]
 scale = Vector2(3, 3)
