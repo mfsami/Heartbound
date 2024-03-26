@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c544bmsqtd2eu"]
+[gd_scene load_steps=20 format=3 uid="uid://c544bmsqtd2eu"]
 
 [ext_resource type="Script" path="res://Scripts/level1.gd" id="1_b28am"]
 [ext_resource type="PackedScene" uid="uid://cwea13xd1i2q5" path="res://Scenes/guy.tscn" id="1_sxuir"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Scripts/Exit1.gd" id="6_ceieg"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="9_k61r2"]
 [ext_resource type="PackedScene" uid="uid://bu4kir7dy3plv" path="res://Scenes/door.tscn" id="10_li0s7"]
+[ext_resource type="AudioStream" uid="uid://pd2ihbrvnkle" path="res://Sounds/HeartCollect.mp3" id="11_1npwr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xooos"]
 size = Vector2(22.9913, 26.6469)
@@ -2020,6 +2021,10 @@ libraries = {
 "": SubResource("AnimationLibrary_1bduw")
 }
 speed_scale = 1.337
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SceneObjects/Hearts/Heart"]
+stream = ExtResource("11_1npwr")
+volume_db = -2.0
 
 [connection signal="area_entered" from="SceneObjects/Guy/Area2D" to="SceneObjects/Guy" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SceneObjects/Exit1" to="SceneObjects/Guy" method="_on_exit_1_area_entered"]

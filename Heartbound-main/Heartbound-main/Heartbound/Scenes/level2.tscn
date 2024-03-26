@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dx3pg2fqsfnrr"]
+[gd_scene load_steps=22 format=3 uid="uid://dx3pg2fqsfnrr"]
 
 [ext_resource type="Script" path="res://Scripts/level2.gd" id="1_54lq3"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_hfx6h"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bcfelaside18e" path="res://Sprites/Tilemap1.png" id="7_c1kgg"]
 [ext_resource type="PackedScene" uid="uid://bhhfsgpl23k1u" path="res://Scenes/heart.tscn" id="9_mml5l"]
 [ext_resource type="Script" path="res://Scripts/Spikes.gd" id="10_aea00"]
+[ext_resource type="AudioStream" uid="uid://pd2ihbrvnkle" path="res://Sounds/HeartCollect.mp3" id="10_nhwr2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xooos"]
 size = Vector2(17, 38.5)
@@ -2147,6 +2148,10 @@ position = Vector2(507, 288.148)
 libraries = {
 "": SubResource("AnimationLibrary_oxqpi")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SceneObjects/Hearts/Heart"]
+stream = ExtResource("10_nhwr2")
+volume_db = -2.0
 
 [node name="Spikes" type="Node" parent="."]
 
