@@ -17,7 +17,7 @@
 ### Controls:
 - Move Left: `A`
 - Move Right: `D`
-- Jump: `Space`
+- Jump/Double Jump: `Space`
 - Enter: `Shift`
 
 
