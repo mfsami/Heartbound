@@ -8,7 +8,7 @@
   
 </h3>
 
-<p align = "center"> <a href="https://mfsam.itch.io/heartbound" >Game Page</a> </p>
+<p align = "center"> <a href="https://mfsam.itch.io/heartbound" target=”_blank” >Game Page</a> </p>
 
 <p align="center">
   <img src="GIF.gif" alt="My Cool GIF">
