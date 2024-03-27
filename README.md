@@ -5,7 +5,10 @@
 
 <h3 align="center">
   A short 2D platformer made with Godot and GDScript
+  
 </h3>
+
+<p align = "center"> <a href="https://mfsam.itch.io/heartbound" >Game Page</a> </p>
 
 <p align="center">
   <img src="GIF.gif" alt="My Cool GIF">
